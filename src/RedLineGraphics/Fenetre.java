@@ -67,4 +67,29 @@ public class Fenetre extends JFrame{
             }
         }
     }
+    /*
+    Simple methode go qui réinitialiser les coordonnées
+    du rond lorsqu'elles atteignent le bout de notre composant.
+    private void go(){
+  for(;;){
+    int x = pan.getPosX(), y = pan.getPosY();
+    x++;
+    y++;
+    pan.setPosX(x);
+    pan.setPosY(y);
+    pan.repaint();
+    try {
+      Thread.sleep(10);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    //Si nos coordonnées arrivent au bord de notre composant
+    //On réinitialise
+    if(x == pan.getWidth() || y == pan.getHeight()){
+      pan.setPosX(-50);
+      pan.setPosY(-50);
+    }
+  }
+}
+     */
 }
