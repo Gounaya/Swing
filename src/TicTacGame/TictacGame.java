@@ -25,8 +25,6 @@ public class TictacGame extends JFrame{
         setVisible(true);
 
     }
-
-
 }
 
 
