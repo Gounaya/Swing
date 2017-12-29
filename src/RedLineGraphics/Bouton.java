@@ -93,8 +93,8 @@ public class Bouton extends JButton implements MouseListener{
     //Méthode appelée lorsque l'on relâche le clic de souris  -util-
     @Override
     public void mouseReleased(MouseEvent mouseEvent) {
-        //Nous changeons le fond de notre image pour le orange lorsque nous relâchons le clic, avec le fichier buttonBrun.png
-
+        //Nous changeons le fond de notre image pour le orange lorsque nous relâchons le clic, avec le fichier buttonBrun.png si la souris est toujours sur le bouton
+        //Coordonnées x et y du cursus de la souris par rapport au Bouton grâce aux méthodes getX et getY
         try {
             img = ImageIO.read(new File("/home/gounaya/Documents/IntellijProject/Swing/src/RedLineGraphics/buttonBrun.png"));
         } catch (IOException e) {
