@@ -95,11 +95,22 @@ public class Bouton extends JButton implements MouseListener{
     public void mouseReleased(MouseEvent mouseEvent) {
         //Nous changeons le fond de notre image pour le orange lorsque nous relâchons le clic, avec le fichier buttonBrun.png si la souris est toujours sur le bouton
         //Coordonnées x et y du cursus de la souris par rapport au Bouton grâce aux méthodes getX et getY
-        try {
-            img = ImageIO.read(new File("/home/gounaya/Documents/IntellijProject/Swing/src/RedLineGraphics/buttonBrun.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
+        if((mouseEvent.getX()>0 && mouseEvent.getX()<this.getWidth())&&(mouseEvent.getY()>0 && mouseEvent.getY()<this.getHeight())){
+            try {
+                img = ImageIO.read(new File("/home/gounaya/Documents/IntellijProject/Swing/src/RedLineGraphics/buttonBrun.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            //Si on se trouve à l'exterieur, on dessine le fond par défaut
+            try{
+                img = ImageIO.read(new File("/home/gounaya/Documents/IntellijProject/Swing/src/RedLineGraphics/buttonGreen.png"));
+            }catch(IOException e){
+                System.out.println("exception Image !");
+                e.printStackTrace();
+            }
         }
+
     }
 
 }
