@@ -1,0 +1,56 @@
+:::::CONSTRUCTORS:::::
+
+_-_-_-public Primes()-_-_-_
+
+	Constructs a new Primes object with 1000 for the length.
+
+_-_-_-public Primes(int length)-_-_-_
+
+	Constructs a new Primes object, with a specified prime
+length. This length indicates the range of prime numbers it's
+expected to find. For example 100 would indicate you searching
+for primes between 1 and 100.
+
+_-_-_-public Primes(int length, Primes p)-_-_-_
+
+	Constructs a new Primes object with specified length
+and is generate using the information from a previously created
+Primes object p.
+
+:::::METHODS:::::
+
+_-_-_-public void reset()-_-_-_
+
+	Resets Primes to output primes starting at 2 (the lowest
+prime)
+
+_-_-_-public boolean test(int value)-_-_-_
+
+	Test a specified value for whether or not it's prime
+	Returns: boolean indicating whether give value is prime
+
+_-_-_-public int nextPrime()-_-_-_
+	
+	Outputs the next prime in the list, when this is run for
+the first time 2 will be return, the next time 3 then 5 etc.
+	Returns: integer represeting next prime in the list
+
+_-_-_-public boolean[] getPrimes()-_-_-_
+
+	Will output the boolean array representing all the current
+information the Primes object has found. The value of each index 
+indicate whether the given index is prime
+	Returns: boolean array representing information found by
+object
+
+_-_-_-pulbic int getLength()-_-_-_
+
+	Ouputs the length/capacity of the object
+	Returns: integer representing length/capacity of object
+
+_-_-_-public int getHighest()-_-_-_
+	
+	Outputs the highest prime found up till this point
+	Returns: integer representing highest prime up till this
+point
+	

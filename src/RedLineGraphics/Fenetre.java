@@ -2,15 +2,19 @@ package RedLineGraphics;
 
 import javax.swing.JFrame;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
-public class Fenetre extends JFrame{
+public class Fenetre extends JFrame implements ActionListener{
     private panneau pan = new panneau();
     private Bouton bouton = new Bouton("mon bouton");
     private JPanel container = new JPanel();
     private JLabel label = new JLabel("LabelAction");
+
+    private int compteur = 0;
 
 
     public Fenetre(){
@@ -23,6 +27,8 @@ public class Fenetre extends JFrame{
         container.add(pan, BorderLayout.CENTER);
         container.add(bouton, BorderLayout.SOUTH);
         container.add(label, BorderLayout.NORTH);
+
+        bouton.addActionListener(this);
 
         //Modif about new label:
             //Définition d'une police d'ecriture
@@ -81,6 +87,13 @@ public class Fenetre extends JFrame{
                 e.printStackTrace();
             }
         }
+    }
+    //méthode qui sera appelée lors d'un clic sur le bouton
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        //lorsqu'on clique sur le bouton, on met à jour le label
+        this.compteur++;
+        label.setText("Vous avez cliqué "+this.compteur+" fois");
     }
 }
     /*
